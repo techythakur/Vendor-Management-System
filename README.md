@@ -22,11 +22,11 @@ pip install -r requirements.txt
 ```bash
 python manage.py createsuperuser
 ```
--- This user will help generate Tokens for Our APIs
+-- This user will help in generating Tokens for Our APIs
 ### 5. run the project
 ```bash
 python manage.py runserver
 ```
 
-Please refer to the Link of Postman collection For API Endpoints and DOC
+Please refer to the Link of Postman collection For API Endpoints
 https://drive.google.com/file/d/18_N2wz_YwdKkRKuASLwbdt8C_puLY3Ns/view?usp=sharing
