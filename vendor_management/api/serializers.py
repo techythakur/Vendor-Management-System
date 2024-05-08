@@ -25,16 +25,6 @@ class PurchaseOrderReadSerializer(serializers.Serializer):
     issue_date = serializers.DateTimeField()
     acknowledgment_date = serializers.DateTimeField(allow_null=True, required=False)
 
-class HistoricalPerformanceReadSerializer(serializers.Serializer):
-    id = serializers.IntegerField(read_only=True)
-    vendor_id = serializers.IntegerField()
-    date = serializers.DateTimeField()
-    on_time_delivery_rate = serializers.FloatField()
-    quality_rating_avg = serializers.FloatField()
-    average_response_time = serializers.FloatField()
-    fulfillment_rate = serializers.FloatField()
-
-
 class VendorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vendor
@@ -43,9 +33,4 @@ class VendorSerializer(serializers.ModelSerializer):
 class PurchaseOrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = PurchaseOrder
-        fields = '__all__'
-
-class HistoricalPerformanceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = HistoricalPerformance
         fields = '__all__'
